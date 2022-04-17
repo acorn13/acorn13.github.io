@@ -1,3 +1,3 @@
 *^Games^*
 
-acorn13.github.io/coreball
+[CoreBall](https://acorn13.github.io/coreball)
