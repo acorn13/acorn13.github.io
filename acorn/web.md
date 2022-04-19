@@ -7,4 +7,4 @@ if you have any problems dm the dev on discord. ^-^
 
 Dev Github: [Dev](https://rxtro1.github.io/welcome)
 
-Acorn Github: [Acorn](acorn13.github.io/welcome)
+Acorn Github: [Acorn](https://acorn13.github.io/welcome)
