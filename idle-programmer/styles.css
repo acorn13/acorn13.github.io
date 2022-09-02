@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 24px;
+    height: 100vh;
+    background-color: #AAA;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid black;
+    font-size: 40px;
+    padding: 8px 16px;
+}
+
+.headerItem {
+    margin-right: 32px;
+}
+
+.headerValue {
+    display: inline-block;
+    font-weight: bold;
+    width: 200px;
+}
+
+.body {
+    position: fixed;
+    top: 72px;
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+}
+
+.console {
+    height: 100%;
+    width: 200px;
+    border-right: 1px solid black;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-family: monospace;
+    position: absolute;
+    left: 0;
+    width: 400px;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.console .console-log {
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding: 0 16px;
+    margin-top: 4px;
+}
+.console-input-row {
+    display: flex;
+    align-items: baseline;
+    padding: 0px 16px;
+    flex: 0 0 32px;
+}
+.console .console-input {
+    height: 32px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    flex-grow: 1;
+}
+
+.verticalGrabBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 400px;
+    cursor: col-resize;
+    font-size: 12px;
+    width: 8px;
+    text-align: center;
+    color: #888;
+}
+
+.gameSections {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    min-width: 500px;
+    left: 408px;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.gameSection {
+    margin-bottom: 8px;
+    background-color: white;
+    padding: 4px;
+    padding-bottom: 0;
+}
+
+.flexRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input.gameInput {
+    padding: .1em .25em;
+    font-size: 1em;
+}
+
+.gameButton {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 24px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+}
+
+.gameButton.smallButton {
+    width: 96px;
+}
+
+[action] {
+    cursor: pointer;
+}
+
+.sectionActions {
+    position: abs;
+    width: 200px;
+}
+
+.actionHeader {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sectionAction {
+    font-size: 16px;
+    background-color: #AAA;
+    border: 1px solid black;
+    margin-bottom: 4px;
+    padding-left: 4px;
+    padding-top: 4px;
+}
+.sectionAction .gameButton {
+    font-size: 16px;
+}
+
+.sectionContent {
+    flex-grow: 1;
+}

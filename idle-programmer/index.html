@@ -1,0 +1,36 @@
+<html>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jstorage.min.js"></script>
+    <script src="lib/async.js"></script>
+    <script src="lib/lodash.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <body>
+        <div class="header">
+            <span class="headerItem">Cycles: <span class="js-cycles headerValue">0</span></span>
+            <span class="headerItem">Clock Speed: <span class="js-clockSpeed headerValue">0Hz</span></span>
+        </div>
+        <div class="body">
+            <div class="js-console console">
+                <div class="js-console-log console-log"></div>
+                <div class="console-input-row">
+                    <span>&gt;</span> <input class="js-console-input console-input" />
+                </div>
+            </div>
+            <div class="js-verticalGrabBar verticalGrabBar">
+                <div>||</div><div>||</div><div>||</div><div>||</div><div>||</div><div>||</div>
+            </div>
+            <div class="js-gameSections gameSections">
+            </div>
+        </div>
+    </body>
+    <script src="js/mjs/mjs.js"></script>
+    <script src="js/mjs/emulator.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/components/Component.js"></script>
+    <script src="js/components/BuyAction.js"></script>
+    <script src="js/components/Adder.js"></script>
+    <script src="js/components/Clicker.js"></script>
+    <script src="js/components/Game.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/console.js"></script>
+</html>
