@@ -1,0 +1,396 @@
+/* Animations woohoo */
+
+/* Rotation animation */
+/* Solution found on StackOverflow: https://stackoverflow.com/questions/16771225/css3-rotate-animation#16771693 */
+@keyframes rotation {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: VCR OSD Mono;
+    src: url("../fonts/VCR_OSD_MONO.ttf");
+}
+
+/* Body */
+/* Solution for disabling text selection found on StackOverflow:
+https://stackoverflow.com/questions/3779534/how-do-i-disable-text-selection-with-css-or-javascript */
+body{
+    background: #ffe09f;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+    -o-user-select:none;
+}
+
+.gameFullContent{
+    /*width: 100%;*/
+    display: flex;
+}
+
+/* Left Container */
+/* just a placeholder atm */
+.leftContainer{
+    /*width: calc(100% * 0.22);*/
+}
+
+.version{
+    font-family: VCR OSD Mono, cursive;
+}
+
+.resetButton{
+    /*position: absolute;*/
+    /*bottom: 5px;*/
+    /*left: 5px;*/
+    width: auto;
+    /*height: 4%;*/
+    border: 2px solid #FFF;
+    font-size: 1vw;
+    font-family: VCR OSD Mono, cursive;
+    background: #ffb84c;
+    color: white;
+    cursor: pointer;
+    padding: 4px 10px;
+    display: inline-block;
+    /*margin: 4px;*/
+}
+
+/* Main Container */
+/* THE BITCOIN IMAGE */
+.mainGameContent{
+    /*width: calc(100% * 0.55);*/
+    min-height: 90vh;
+    /*position: relative;*/
+}
+
+/* Right Container */
+/* All items which you can buy */
+.rightContainer{
+    /*width: calc(100% * 0.25);*/
+    border: 4px solid white;
+    max-height: 96vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+ul.recordList {
+    border: 4px solid white;
+}
+
+.recordItem.nopadding {
+    padding: 0px !important;
+}
+
+.responsive {
+    max-width: 100%;
+}
+
+.bitcoinAmountDisplay{
+    text-align: center;
+    font-family: VCR OSD Mono, cursive;
+    font-size: 45pt;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+    margin: 20px 0 0 0px;
+}
+.satoshiAmountDisplay {
+    text-align: center;
+    font-family: VCR OSD Mono, cursive;
+    font-size: 15pt;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+    padding: 0 !important;
+    margin: 0 0 -15px 0px;
+}
+.bSecRate{
+    text-align: center;
+    font-family: VCR OSD Mono, cursive;
+    font-size: 25pt;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black
+}
+
+.widePlacement {
+    display: block;
+    /*width: 100%;*/
+    clear: both;
+}
+
+.widePlacement iframe.responsive {
+    margin: 0px auto;
+}
+
+.bitcoinTimeDisplay{
+    text-align: center;
+    font-family: VCR OSD Mono, cursive;
+    font-size: 45pt;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+    width: 100%;
+}
+
+/* BITCOIN */
+.bitcoin{
+    width: 30vh;
+    /*position: relative;*/
+    display: block;
+    /*position: absolute;*/
+    /*left: 30%;*/
+    /*right: 30%;*/
+    margin: 0 auto;
+    /*top: 28%;*/
+    transition: width 0.2s ease-in-out, top 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 500px;
+    animation: rotation 20s linear infinite;
+    animation-play-state: paused;
+    /*box-shadow: 5px 5px 5px rgba(128,128,128,.5);*/
+}
+
+.bitcoin img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+body.active .bitcoin {
+    animation-play-state: running;
+}
+
+.bitcoin:hover{
+    /*width: 27%;*/
+    /*top: 26%;*/
+    transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
+    /*box-shadow: 4px 4px 3px rgba(128,128,128,.5);*/
+}
+.bitcoin:active{
+    /*width: 26%;*/
+    /*top: 27%;*/
+    transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
+    /*box-shadow: 2px 2px 2px rgba(128,128,128,.5);*/
+}
+
+
+.bitcoin::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.bitcoin:hover::after {
+  opacity: 1;
+}
+
+.bitcoin:active::after {
+    opacity: 0;
+}
+
+
+/* Item list */
+.purchaseList{
+    list-style-type: none;
+    font-family: "VCR OSD Mono", cursive;
+    margin: 0;
+    padding: 0;
+}
+
+/* Item list */
+.recordList{
+    list-style-type: none;
+    font-family: "VCR OSD Mono", cursive;
+    margin: 0;
+    padding: 0;
+}
+
+/* Item list item */
+.recordItem{
+    /*width: 99%;*/
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    /*border-right: 3px solid white;*/
+    padding-left: 10px;
+    background: linear-gradient(#ffe09f, #ffb84c);
+}
+
+/* Optimization for smaller screens */
+
+@media screen and (max-width: 767px) {
+    /* BITCOIN */
+    /*.bitcoin{
+        width: 35%;
+        display: block;
+        position: absolute;
+        left: 30%;
+        right: 30%;
+        margin: 0 auto;
+        top: 35%;
+        transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
+        animation: rotation 20s linear infinite;
+        border-radius: 500px;
+    }
+    .bitcoin:hover{
+        width: 37%;
+        top: 33%;
+        transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
+    }
+    .bitcoin:active{
+        width: 33%;
+        top: 37%;
+        transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
+    }*/
+}
+
+/* Item list item */
+.purchaseItem{
+    /*width: 99%;*/
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    /*border-right: 3px solid white;*/
+    padding-left: 10px;
+    background: linear-gradient(#ffe09f, #ffb84c);
+}
+
+.purchaseItem.inactive {
+    pointer-events: none;
+    opacity: .75;
+}
+
+.purchaseItem:hover{
+    background: linear-gradient(90deg, #ffe09f, #ffb84c);
+    cursor: pointer;
+}
+.amountOfItem{
+    float: right;
+    font-size: 66pt;
+    margin-right: 15px;
+    color: rgba(0,0,0,.4);
+    margin-top: -10px;
+    margin-bottom: -50px;
+}
+.itemHeadline{
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    /*cursor: pointer;*/ /* Add a pointer on hover */
+    transition: visibility .25s, opacity .25s linear;
+    visibility: visible;
+    opacity: 1;
+    z-index: 99999;
+}
+
+body.active #overlay {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.wrapper div {
+  /*max-width: 60%;*/
+  font-size: 4rem;
+  color: #FFF;
+  font-family: VCR OSD Mono, cursive;
+  text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+  /*padding-bottom: 3rem;*/
+}
+
+/*
+.wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.Aligner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.Aligner-item {
+  max-width: 60%;
+  font-size: 4rem;
+  color: #FFF;
+  font-family: VCR OSD Mono, cursive;
+  text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
+  padding-bottom: 3rem;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+*/
+
+/*Responsive CSS*/
+
+.media iframe {
+    margin: 1rem auto;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+
+    .bitcoinTimeDisplay{
+        font-size: 1.8rem;
+    }
+
+    .rightContainer{
+        /*width: calc(100% * 0.25);*/
+        border: 0px solid white;
+        max-height: none;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    .wrapper div {
+      /*max-width: 60%;*/
+      font-size: 10vw;
+
+    }
+
+    .resetButton{
+        font-size: 1.0rem;
+    }
+
+
+}
+
+@media screen and (min-width: 767px) {
+
+    .bitcoinTimeDisplay{
+        font-size: 4.0rem;
+    }
+
+
+}
