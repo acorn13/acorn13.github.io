@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+	<!-- BORING RESOURCE PART -->
+
+	<head>
+		<title>Nutty Collector!</title>
+
+		<!-- SCRIPTS -->
+
+		<!-- JavaScript Additions -->
+		<script type="text/javascript" src="base_javascript_additions.js"></script>
+		<script type="text/javascript" src="htmlInteraction.js"></script>
+
+		<!-- Tickets -->
+		<script type="text/javascript" src="tickets.js"></script>
+
+		<!-- base "currencies" -->
+		<script type="text/javascript" src="nuts.js"></script>
+		<script type="text/javascript" src="peanuts.js"></script>
+
+		<!-- Game engine/"Update" Functions -->
+		<script type="text/javascript" src="main.js"></script>
+
+		<!-- Buttons -->
+		<script type="text/javascript" src="buttons.js"></script>
+
+		<!-- Design -->
+		<link rel="stylesheet" type="text/css" href="design.css" />
+	</head>
+
+	<!-- Let's get to the actual body now! -->
+	<body>
+
+		<span id="nuts"></span> <br/>
+		<span id="peanuts" style="visibility:hidden"></span> <br/>
+		<button id="buyPeanut" style="visibility:hidden" onClick="peanuts.buy1()">Trade for a peanut (10 nuts)</button>
+		<button id="buyPeanut10" style="visibility:hidden" onClick="peanuts.buy10()">Trade for 10 peanuts (100 nuts)</button>
+
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+
+		<div id="tickets">
+			<span id="ticketsCommon" style="visibility:hidden"> </span> <button id="scratchCommon" style="visibility:hidden" onClick="tickets.scratchCommon()">Scratch 1</button> <span id="commonCongrats" style="visibility:hidden"> </span>  <br/>
+			<span id="ticketsShiny" style="visibility:hidden"> </span> <button id="scratchShiny" style="visibility:hidden" onClick="tickets.scratchShiny()">Scratch 1</button> <span id="shinyCongrats" style="visibility:hidden"> </span> <br/>
+			<span id="ticketsGolden" style="visibility:hidden"> </span> <button id="scratchGolden" style="visibility:hidden" onClick="tickets.scratchGolden()">Scratch 1</button> <span id="goldenCongrats" style="visibility:hidden"> </span>  <br/>
+			<button id="buyTicket" onClick="tickets.buyTicket()" style="visibility:hidden">Buy a scratch ticket (10 peanuts)</button>
+		</div>
+
+	</body>
+	
+	<footer>
+		<p>by Henry Bobeck.</p>
+	</footer>
+
+
+</html>
