@@ -1,0 +1,246 @@
+/* reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/*=====================================================================================
+BASE
+=======================================================================================*/
+html,body
+{
+	width:100%;
+	height:100%;
+}
+body
+{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color:#ccc;
+	text-shadow:1px 1px 0px #000;
+	background:#000;
+	font-family:Tahoma,Arial,sans-serif;
+	font-size:11px;
+}
+
+b{font-weight:bold;}
+i{font-style:italic;}
+u{text-decoration:underline;}
+small{font-size:80%;}
+
+.outFrame #game
+{
+	position:absolute;
+	left:0px;top:26px;right:0px;bottom:102px;
+	display:block;
+	background:#000;
+}
+.inFrame #game
+{
+	position:absolute;
+	left:0px;top:0px;right:0px;bottom:0px;
+	display:none;
+}
+
+#player,#main
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+.outFrame #code
+{
+	position:absolute;
+	left:0px;top:26px;right:0px;bottom:102px;
+	display:block;
+	background:#000;
+}
+#editor
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	display:none;
+}
+.withCode #editor
+{
+	display:block;
+}
+
+.editor #game
+{
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+.editor #codeWrap
+{
+	width:100%;
+	height:100%;
+	padding:8px;
+}
+.editor #code
+{
+	width:100%;
+	height:100%;
+	padding:16px;
+	margin:0px;
+	outline:none;
+	box-sizing:border-box;
+}
+
+
+#topBar,#ad
+{
+	color:#999;
+	font-size:11px;
+	background:#222;
+}
+
+#topBar
+{
+	position:absolute;
+	left:0px;right:0px;top:0px;height:26px;
+	background:url(img/darkNoiseTopBar.jpg) repeat-x bottom,url(img/darkNoise.jpg);
+}
+#topBar>div
+{
+	display:inline-block;
+	float:left;
+	border-right:1px solid #000;
+	box-shadow:0px 0px 3px 1px rgba(255,255,255,0.2) inset;
+	padding:5px 8px 7px 8px;
+}
+#topBar a
+{color:#ccc;}
+#topBar a:hover
+{color:#fff;}
+#topBar a.blueLink
+{color:#06c;}
+#topBar a.blueLink:hover
+{color:#28f;text-shadow:0px 0px 3px #06c;}
+#topBar>#links
+{
+	display:block;
+	position:absolute;
+	right:0px;
+	top:0px;
+	z-index:100000000000;
+	float:none;
+}
+
+#ad
+{
+	position:absolute;
+	left:0px;right:0px;bottom:0px;height:102px;
+	background:linear-gradient(to right,rgba(0,0,0,0) 15%,rgba(0,0,0,0.75)),url(img/darkNoiseRightBar.jpg) repeat-y left,url(img/darkNoise.jpg);
+}
+
+
+
+.outFrame #game
+{
+	right:13%;
+	bottom:0px;
+}
+.outFrame.withCode #game 
+{
+	left:30%;
+}
+.outFrame #code
+{
+	left:0px;
+	width:30%;
+	bottom:0px;
+}
+#ad
+{
+	left:auto;
+	right:0px;
+	top:26px;
+	bottom:0px;
+	width:13%;
+	height:auto;
+}
+
+#fpsCounter
+{
+	background:#333;
+	color:#fff;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	padding:3px;
+	z-index:10000001;
+	opacity:0.5;
+	pointer-events:none;
+}
+#fpsGraph
+{
+	background:#333;
+	color:#fff;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	padding:3px;
+	width:128px;
+	height:64px;
+	z-index:10000000;
+	opacity:0.5;
+	pointer-events:none;
+}
+
+#wrap
+{
+	position:absolute;left:0px;right:0px;top:0px;bottom:0px;
+	overflow:hidden;
+}
