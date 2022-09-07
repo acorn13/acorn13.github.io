@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>chihuahuaspin.com</title>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<br>
+<center>
+  <div style="position: relative; width: 200px">
+    <!-- <img src="/spin.gif"> -->
+    <img src="http://cdn.funnyisms.com/d3540090-1765-4633-99ff-1bb3ba7e40ec.gif">
+    <div id="ethan" style="position: absolute; top: 12px; right: 2px; width: 80px; background-color: #aaa; color: #f00; padding: 5px; display: none">
+      You are officially Ethan :-)
+    </div>
+  </div>
+</center>
+<br>
+<center>
+  <big>You have sat through <span id="spin">0 spins</span>!</big>
+</center>
+</body>
+</html>
+
+<script>
+$(window).load(function (){
+  var spins = 0;
+  setInterval(function () {
+    spins = spins + 1;
+    $("#spin").text(spins + " spin" + (spins != 1 ? "s" : ""));
+    if (spins == 10)
+      $("#ethan").show();
+    else if (spins == 17)
+      $("#ethan").hide();
+  }, 4205);
+});
+</script>
+
+<!-- hearts to Ethan, Neal, and Shawn -->
+
